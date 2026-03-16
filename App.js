@@ -1,5 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableHighlight,
+} from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function App() {
@@ -7,13 +13,15 @@ export default function App() {
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         <Text>Hello React Native</Text>
-        <Image
-          source={{
-            width: 200,
-            height: 300,
-            uri: "https://picsum.photos/200/300",
-          }}
-        />
+        <TouchableHighlight onPress={() => console.log("Image Tapped")}>
+          <Image
+            source={{
+              width: 200,
+              height: 300,
+              uri: "https://picsum.photos/200/300",
+            }}
+          />
+        </TouchableHighlight>
         <StatusBar style="auto" />
       </SafeAreaView>
     </SafeAreaProvider>
