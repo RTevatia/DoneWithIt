@@ -1,9 +1,6 @@
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { useState } from "react";
 
-import AppPicker from "./app/components/AppPicker";
-import AppTextInput from "./app/components/AppTextInput";
-import Screen from "./app/components/Screen";
+import LoginScreen from "./app/screens/LoginScreen";
 
 const categories = [
   { label: "Furniture", value: 1 },
@@ -12,22 +9,9 @@ const categories = [
 ];
 
 export default function App() {
-  const [category, setCategory] = useState(categories[0]);
-
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      {
-        <Screen>
-          <AppPicker
-            selectedItem={category}
-            onSelectItem={(item) => setCategory(item)}
-            icon="apps"
-            items={categories}
-            placeholder="Category"
-          />
-          <AppTextInput icon="email" placeholder="Email" />
-        </Screen>
-      }
+      {<LoginScreen />}
     </GestureHandlerRootView>
   );
 }
