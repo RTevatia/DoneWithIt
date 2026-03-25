@@ -1,11 +1,13 @@
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
-import RegisterScreen from "./app/screens/RegisterScreen";
+import ListEditScreen from "./app/screens/ListEditScreen";
 
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      {<RegisterScreen />}
+      {
+        <ListEditScreen />
+      }
     </GestureHandlerRootView>
   );
 }
