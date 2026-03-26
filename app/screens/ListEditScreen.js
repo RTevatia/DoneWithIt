@@ -41,16 +41,22 @@ function ListEditScreen(props) {
           maxLength={8}
           name="price"
           placeholder="Price"
+          width={120}
         />
-        <Picker items={categories} name="category" placeholder="Category" />
-        <FormField 
-            maxLength={255}
-            multiline
-            name="description"
-            numberOfLines={3}
-            placeholder="Description"
+        <Picker
+          items={categories}
+          name="category"
+          placeholder="Category"
+          width="50%"
         />
-        <SubmitButton title="Post"/>
+        <FormField
+          maxLength={255}
+          multiline
+          name="description"
+          numberOfLines={3}
+          placeholder="Description"
+        />
+        <SubmitButton title="Post" />
       </Form>
     </Screen>
   );
