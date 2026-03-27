@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet } from "react-native";
 
 import Screen from "../components/Screen";
-import { AppForm, AppFormField, SubmitButton } from "../components/forms";
+import { Form, FormField, SubmitButton } from "../components/forms";
 
 import * as Yup from "yup";
 
@@ -15,18 +15,18 @@ const validationSchema = Yup.object().shape({
 function RegisterScreen(props) {
   return (
     <Screen style={styles.container}>
-      <AppForm
+      <Form
         initialValues={{ name: "", email: "", password: "" }}
         onSubmit={(value) => console.log(value)}
         validationSchema={validationSchema}
       >
-        <AppFormField
+        <FormField
           autocorrect={false}
           icon="account"
           name="name"
           placeholder="Name"
         />
-        <AppFormField
+        <FormField
           autoCapitalize="none"
           autocorrect={false}
           icon="email"
@@ -35,7 +35,7 @@ function RegisterScreen(props) {
           placeholder="Email"
           textContentType="emailAddress"
         />
-        <AppFormField
+        <FormField
           autoCapitalize="none"
           autocorrect={false}
           icon="lock"
@@ -45,7 +45,7 @@ function RegisterScreen(props) {
           textContentType="password"
         />
         <SubmitButton title="Register"/>
-      </AppForm>
+      </Form>
     </Screen>
   );
 }

@@ -9,7 +9,7 @@ import {
 } from "react-native";
 
 import defaultStyles from "../config/styles";
-import AppText from "./AppText";
+import Text from "./Text";
 import { useState } from "react";
 import Screen from "./Screen";
 import PickerItem from "./PickerItem";
@@ -38,9 +38,9 @@ function AppPicker({
             />
           )}
           {selectedItem ? (
-            <AppText style={styles.text}>{selectedItem.label}</AppText>
+            <Text style={styles.text}>{selectedItem.label}</Text>
           ) : (
-            <AppText style={styles.placeholder}>{placeholder}</AppText>
+            <Text style={styles.placeholder}>{placeholder}</Text>
           )}
           <MaterialCommunityIcons
             name="chevron-down"

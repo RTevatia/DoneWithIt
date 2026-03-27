@@ -3,9 +3,9 @@ import * as Yup from "yup";
 
 import Screen from "../components/Screen";
 import {
-  AppFormField as FormField,
-  AppForm as Form,
-  AppFormPicker as Picker,
+  FormField,
+  Form,
+  FormPicker as Picker,
   SubmitButton,
 } from "../components/forms";
 import CategoryPickerItem from "../components/CategoryPickerItem";
