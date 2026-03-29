@@ -15,6 +15,7 @@
     "expo": "~54",
     "expo-constants": "~18.0.13",
     "expo-image-picker": "~17.0.10",
+    "expo-location": "~19.0.8",
     "expo-permissions": "^14.4.0",
     "expo-status-bar": "~3.0.8",
     "formik": "^2.1.4",
