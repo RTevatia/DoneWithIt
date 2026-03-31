@@ -1,5 +1,6 @@
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 import Button from "../components/Button";
+import routes from "../navigation/routes";
 
 function WelcomeScreen({ navigation }) {
   return (
@@ -17,7 +18,7 @@ function WelcomeScreen({ navigation }) {
         <Button
           title="Register"
           color="secondary"
-          onPress={() => navigation.navigate("Register")}
+          onPress={() => navigation.navigate(routes.REGISTER)}
         />
       </View>
     </ImageBackground>
