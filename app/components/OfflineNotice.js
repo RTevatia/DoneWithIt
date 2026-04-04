@@ -9,14 +9,18 @@ import Text from "./Text/Text";
 function OfflineNotice(props) {
   const netInfo = useNetInfo();
 
-  if (netInfo.type !== "unknown" && netInfo.isInternetReachable === false)
-    return (
-      <View style={styles.container}>
-        <Text style={styles.text}>No Internet Connection</Text>
-      </View>
-    );
+  const isOffline =
+    netInfo.isConnected === false ||
+    (netInfo.isInternetReachable != null &&
+      netInfo.isInternetReachable === false);
 
-  return null;
+  if (!isOffline) return null;
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>No Internet Connection</Text>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({

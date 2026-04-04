@@ -3,14 +3,9 @@
     "name": "DoneWithIt",
     "slug": "DoneWithIt",
     "version": "1.0.0",
-    "orientation": "potrait",
+    "orientation": "portrait",
     "icon": "./app/assets/icon.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./app/assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "ios": {
       "supportsTablet": true
     },
@@ -26,7 +21,14 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-secure-store"
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#e63c4b",
+          "image": "./app/assets/splash.png",
+          "imageWidth": 200
+        }
+      ]
     ]
   }
 }
