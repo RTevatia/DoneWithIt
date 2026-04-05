@@ -18,13 +18,16 @@ function ActivityIndicator({ visible = false }) {
 
 const styles = StyleSheet.create({
   contianer: {
-    justifyContent: "center",
-    alignItems: "center",
-    flex: 1,
+    backgroundColor: "white",
+    position: "absolute",
+    height: "100%",
+    width: "100%",
+    zIndex: 1,
+    opacity: 0.8,
   },
   animation: {
-    width: 650,
-    height: 650,
+    width: "100%",
+    height: "100%",
   },
 });
 

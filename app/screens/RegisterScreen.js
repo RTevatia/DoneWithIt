@@ -48,41 +48,43 @@ function RegisterScreen(props) {
   };
 
   return (
-    <Screen style={styles.container}>
+    <>
       <ActivityIndicator visible={registerApi.loading || loginApi.loading} />
-      <Form
-        initialValues={{ name: "", email: "", password: "" }}
-        onSubmit={handleSubmit}
-        validationSchema={validationSchema}
-      >
-        <ErrorMessage error={error} visible={error} />
-        <FormField
-          autocorrect={false}
-          icon="account"
-          name="name"
-          placeholder="Name"
-        />
-        <FormField
-          autoCapitalize="none"
-          autocorrect={false}
-          icon="email"
-          keyboardType="email-address"
-          name="email"
-          placeholder="Email"
-          textContentType="emailAddress"
-        />
-        <FormField
-          autoCapitalize="none"
-          autocorrect={false}
-          icon="lock"
-          name="password"
-          placeholder="Password"
-          secureTextEntry
-          textContentType="password"
-        />
-        <SubmitButton title="Register" />
-      </Form>
-    </Screen>
+      <Screen style={styles.container}>
+        <Form
+          initialValues={{ name: "", email: "", password: "" }}
+          onSubmit={handleSubmit}
+          validationSchema={validationSchema}
+        >
+          <ErrorMessage error={error} visible={error} />
+          <FormField
+            autocorrect={false}
+            icon="account"
+            name="name"
+            placeholder="Name"
+          />
+          <FormField
+            autoCapitalize="none"
+            autocorrect={false}
+            icon="email"
+            keyboardType="email-address"
+            name="email"
+            placeholder="Email"
+            textContentType="emailAddress"
+          />
+          <FormField
+            autoCapitalize="none"
+            autocorrect={false}
+            icon="lock"
+            name="password"
+            placeholder="Password"
+            secureTextEntry
+            textContentType="password"
+          />
+          <SubmitButton title="Register" />
+        </Form>
+      </Screen>
+    </>
   );
 }
 
